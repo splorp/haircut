@@ -7,5 +7,9 @@ This script calculates basic statistics pulled from [my haircut page](https://sp
 
 ## Change Log
 
+### 20131023
++ Educated the apostrophes
++ Minor edits and formatting tweaks
+
 ### 20121114
 + Initial release as a [Gist](https://gist.github.com/kylefox/654113) by [Kyle Fox](https://github.com/kylefox/)

@@ -1,12 +1,14 @@
-# A script to calculate some basic stats on Grant Hutchinson's haircuts.
-# See http://splorp.com/about/haircut/
+# Based on the original Python script by Kyle Fox.
+# This script calculates basic statistics from my haircut page.
+# See: http://splorp.com/about/haircut/
 #
 # Sample output:
+#
 #    Number of haircuts since December 22, 1998: 53
 #    Average days between haircuts: 77
-#    Shortest time between haircuts was April 10, 1999 to May 25, 1999 (45 days)
-#    Longest time between haircuts was August 11, 2007 to December 09, 2007 (120 days)
-#    You'll probably want a haircut in about 63 days (March 08, 2010)
+#    Shortest time between haircuts: April 10, 1999 to May 25, 1999 (45 days)
+#    Longest time between haircuts: August 11, 2007 to December 09, 2007 (120 days)
+#    You’ll probably want a haircut in about 63 days (March 08, 2010)
 
 import datetime
 import urllib2
@@ -60,7 +62,7 @@ if __name__ == '__main__':
     next = (last + datetime.timedelta(days=avg))
     print "Number of haircuts since %s: %d" % (dates[0].strftime("%B %d, %Y"), len(dates))
     print "Average days between haircuts: %d" % avg
-    print "Shortest time between haircuts was %s to %s (%d days)" % (mn[0].strftime(STR), mn[1].strftime(STR), (mn[1]-mn[0]).days)
-    print "Longest time between haircuts was %s to %s (%d days)" % (mx[0].strftime(STR), mx[1].strftime(STR), (mx[1]-mx[0]).days)
-    print "You'll probably want a haircut in about %s days (%s)" % ((next-datetime.date.today()).days, next.strftime(STR))
+    print "Shortest time between haircuts: %s to %s (%d days)" % (mn[0].strftime(STR), mn[1].strftime(STR), (mn[1]-mn[0]).days)
+    print "Longest time between haircuts: %s to %s (%d days)" % (mx[0].strftime(STR), mx[1].strftime(STR), (mx[1]-mx[0]).days)
+    print "You’ll probably want a haircut in about %s days (%s)" % ((next-datetime.date.today()).days, next.strftime(STR))
     print "Last haircut (%s) was %s days ago." % (last.strftime(STR), (today-last).days)
