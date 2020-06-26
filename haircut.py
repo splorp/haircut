@@ -1,7 +1,7 @@
 # coding=utf-8
 #
-# This script calculates basic statistics from my haircut page.
-# See: http://splorp.com/about/haircut/
+# A script to calculate some basic stats on Grant Hutchinson’s haircuts.
+# See: https://splorp.com/about/haircut/
 #
 # Requires BeautifulSoup 3
 # https://www.crummy.com/software/BeautifulSoup/
@@ -18,7 +18,7 @@ import datetime
 import urllib2
 from BeautifulSoup import BeautifulSoup
 
-HAIRCUTS = "http://splorp.com/about/haircut/"
+HAIRCUTS = "https://splorp.com/about/haircut/"
 MONTHS = 'january february march april may june july august september october november december'.split()
 
 def fetch_dates():
