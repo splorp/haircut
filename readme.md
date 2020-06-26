@@ -4,6 +4,17 @@ This Python script calculates basic statistics pulled from [my haircut page](htt
 
 Based on the original [Gist](https://gist.github.com/kylefox/654113) created by [Kyle Fox](https://github.com/kylefox/).
 
+## Sample Output
+
+```
+Number of haircuts since October 10, 1998: 106
+Average days between haircuts: 74
+Shortest time between haircuts: 9 days (July 21, 2016 to July 30, 2016)
+Longest time between haircuts: 120 days (August 11, 2007 to December 09, 2007)
+Your last haircut was 82 days ago. (March 05, 2020)
+You probably should’ve had a haircut 8 days ago. (May 18, 2020)
+```
+
 ## Requirements
 
 + [Python 2.x](https://www.python.org/downloads/)
