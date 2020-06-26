@@ -3,6 +3,9 @@
 # This script calculates basic statistics from my haircut page.
 # See: http://splorp.com/about/haircut/
 #
+# Requires BeautifulSoup 3
+# https://www.crummy.com/software/BeautifulSoup/
+#
 # Sample output:
 #
 #    Number of haircuts since December 22, 1998: 53

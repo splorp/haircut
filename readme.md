@@ -7,6 +7,9 @@ This script calculates basic statistics pulled from [my haircut page](https://sp
 
 ## Change Log
 
+### 20180327
++ Added note regarding [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) requirement
+
 ### 20131109
 + Set the encoding to UTF-8
 
