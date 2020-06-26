@@ -7,6 +7,9 @@ This script calculates basic statistics pulled from [my haircut page](https://sp
 
 ## Change Log
 
+### 20131109
++ Set the encoding to UTF-8
+
 ### 20131023
 + Educated the apostrophes
 + Minor edits and formatting tweaks

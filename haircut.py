@@ -1,4 +1,5 @@
-# Based on the original Python script by Kyle Fox.
+# coding=utf-8
+#
 # This script calculates basic statistics from my haircut page.
 # See: http://splorp.com/about/haircut/
 #
