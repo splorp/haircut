@@ -69,10 +69,11 @@ if __name__ == '__main__':
     print "Average days between haircuts: %d" % avg
     print "Shortest time between haircuts: %d days (%s to %s)" % ((mn[1]-mn[0]).days, mn[0].strftime(STR), mn[1].strftime(STR))
     print "Longest time between haircuts: %d days (%s to %s)" % ((mx[1]-mx[0]).days, mx[0].strftime(STR), mx[1].strftime(STR))
-    print "Your last haircut was %s days ago. (%s)" % ((today-last).days, last.strftime(STR))
+    if (today-last).days == 0:
+    	print "You got your haircut today. Awesome."
+    if (today-last).days > 0:
+    	print "Your last haircut was %s days ago. (%s)" % ((today-last).days, last.strftime(STR))
     if (next-datetime.date.today()).days <= -1:
     	print "You probably should’ve had a haircut %s days ago. (%s)" % (abs((next-datetime.date.today()).days), next.strftime(STR))
-    if (next-datetime.date.today()).days == 0:
-    	print "You got your haircut today. Awesome."
     if (next-datetime.date.today()).days >= 1:
     	print "You probably should get another haircut in about %s days. (%s)" % ((next-datetime.date.today()).days, next.strftime(STR))
