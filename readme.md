@@ -22,6 +22,9 @@ You probably should’ve had a haircut 8 days ago. (May 18, 2020)
 
 ## Change Log
 
+### 20200714
++ Modified output for haircuts occuring one day ago
+
 ### 20200526
 + Modified output for consistent display of days and dates
 + Added more descriptive “next haircut” strings

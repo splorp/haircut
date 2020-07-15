@@ -71,7 +71,9 @@ if __name__ == '__main__':
 	print "Longest time between haircuts: %d days (%s to %s)" % ((mx[1]-mx[0]).days, mx[0].strftime(STR), mx[1].strftime(STR))
 	if (today-last).days == 0:
 		print "You got your haircut today. Awesome."
-	if (today-last).days > 0:
+	if (today-last).days == 1:
+		print "Your last haircut was yesterday."
+	if (today-last).days > 1:
 		print "Your last haircut was %s days ago. (%s)" % ((today-last).days, last.strftime(STR))
 	if (next-datetime.date.today()).days <= -1:
 		print "You probably should’ve had a haircut %s days ago. (%s)" % (abs((next-datetime.date.today()).days), next.strftime(STR))
