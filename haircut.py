@@ -8,10 +8,10 @@
 #
 # Sample output:
 #
-# Number of haircuts since October 10, 1998: 106
-# Average days between haircuts: 74
-# Shortest time between haircuts: 9 days (July 21, 2016 to July 30, 2016)
-# Longest time between haircuts: 120 days (August 11, 2007 to December 09, 2007)
+# Number of haircuts recorded: 106 (Since October 10, 1998)
+# Shortest period between haircuts: 9 days (July 21, 2016 to July 30, 2016)
+# Longest period between haircuts: 120 days (August 11, 2007 to December 09, 2007)
+# Average period between haircuts: 74 days
 # Your last haircut was 82 days ago. (March 05, 2020)
 # You probably should’ve had a haircut 8 days ago. (May 18, 2020)
 
@@ -65,10 +65,11 @@ if __name__ == '__main__':
 	today = datetime.date.today()
 	last = dates[-1]
 	next = (last + datetime.timedelta(days=avg))
-	print "Number of haircuts since %s: %d" % (dates[0].strftime("%B %d, %Y"), len(dates))
-	print "Average days between haircuts: %d" % avg
-	print "Shortest time between haircuts: %d days (%s to %s)" % ((mn[1]-mn[0]).days, mn[0].strftime(STR), mn[1].strftime(STR))
-	print "Longest time between haircuts: %d days (%s to %s)" % ((mx[1]-mx[0]).days, mx[0].strftime(STR), mx[1].strftime(STR))
+	print ""
+	print "Number of haircuts recorded: %d (Since %s)" % (len(dates), dates[0].strftime("%B %d, %Y"))
+	print "Shortest period between haircuts: %d days (%s to %s)" % ((mn[1]-mn[0]).days, mn[0].strftime(STR), mn[1].strftime(STR))
+	print "Longest period between haircuts: %d days (%s to %s)" % ((mx[1]-mx[0]).days, mx[0].strftime(STR), mx[1].strftime(STR))
+	print "Average period between haircuts: %d days" % avg
 	if (today-last).days == 0:
 		print "You got your haircut today. Awesome."
 	if (today-last).days == 1:
@@ -79,3 +80,5 @@ if __name__ == '__main__':
 		print "You probably should’ve had a haircut %s days ago. (%s)" % (abs((next-datetime.date.today()).days), next.strftime(STR))
 	if (next-datetime.date.today()).days >= 1:
 		print "You probably should get another haircut in about %s days. (%s)" % ((next-datetime.date.today()).days, next.strftime(STR))
+	print ""
+
