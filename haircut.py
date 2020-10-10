@@ -57,11 +57,18 @@ def get_deltas(dates):
 			deltas.append(days)
 	return mn, mx, deltas
 	
+def median(data):
+    quotient, remainder = divmod(len(data), 2)
+    if remainder:
+        return sorted(data)[quotient]
+    return sum(sorted(data)[quotient - 1:quotient + 1]) / 2.
+	
 if __name__ == '__main__':
 	STR = "%B %d, %Y"
 	dates = get_dates()
 	mn, mx, deltas = get_deltas(dates)
 	avg = (sum(deltas) / len(deltas))
+	mdn = median(deltas)
 	today = datetime.date.today()
 	last = dates[-1]
 	next = (last + datetime.timedelta(days=avg))
@@ -70,6 +77,7 @@ if __name__ == '__main__':
 	print "Shortest period between haircuts: %d days (%s to %s)" % ((mn[1]-mn[0]).days, mn[0].strftime(STR), mn[1].strftime(STR))
 	print "Longest period between haircuts: %d days (%s to %s)" % ((mx[1]-mx[0]).days, mx[0].strftime(STR), mx[1].strftime(STR))
 	print "Average period between haircuts: %d days" % avg
+	print "Median period between haircuts: %d days" % mdn
 	if (today-last).days == 0:
 		print "You got your haircut today. Awesome."
 	if (today-last).days == 1:

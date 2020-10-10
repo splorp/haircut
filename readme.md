@@ -11,6 +11,7 @@ Number of haircuts recorded: 106 (Since October 10, 1998)
 Shortest period between haircuts: 9 days (July 21, 2016 to July 30, 2016)
 Longest period between haircuts: 120 days (August 11, 2007 to December 09, 2007)
 Average period between haircuts: 74 days
+Median period between haircuts: 73 days
 Your last haircut was 82 days ago. (March 05, 2020)
 You probably should’ve had a haircut 8 days ago. (May 18, 2020)
 ```
@@ -21,6 +22,9 @@ You probably should’ve had a haircut 8 days ago. (May 18, 2020)
 + [BeautifulSoup 3.x](https://www.crummy.com/software/BeautifulSoup/)
 
 ## Change Log
+
+### 20201010
++ Added calculation of the median period between haircuts
 
 ### 20200922
 + Modified output for even more consistent display of days and dates
