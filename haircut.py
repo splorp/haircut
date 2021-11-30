@@ -19,12 +19,14 @@ import datetime
 import urllib2
 from BeautifulSoup import BeautifulSoup
 
-HAIRCUTS = "https://splorp.com/about/haircut/"
 calendar = 'january february march april may june july august september october november december'.split()
 
+page = urllib2.Request('https://splorp.com/about/haircut')
+page.add_header('User-agent', 'Mozilla 5.10')
+
 def fetch_dates():
-	soup = BeautifulSoup(urllib2.urlopen(HAIRCUTS).read())
-	return [span.string for span in soup.findAll('span', {"class": "dtstart"})]
+	soup = BeautifulSoup(urllib2.urlopen(page))
+	return [span.string for span in soup.findAll('span', {'class': 'dtstart'})]
 
 def get_dates():
 	dates = []
