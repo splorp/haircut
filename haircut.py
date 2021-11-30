@@ -20,7 +20,7 @@ import urllib2
 from BeautifulSoup import BeautifulSoup
 
 HAIRCUTS = "https://splorp.com/about/haircut/"
-MONTHS = 'january february march april may june july august september october november december'.split()
+calendar = 'january february march april may june july august september october november december'.split()
 
 def fetch_dates():
 	soup = BeautifulSoup(urllib2.urlopen(HAIRCUTS).read())
@@ -31,7 +31,7 @@ def get_dates():
 	for d in fetch_dates():
 		day, month, year = d.lower().split()
 		try:
-			date = datetime.date(int(year), int(MONTHS.index(month))+1, int(day))
+			date = datetime.date(int(year), int(calendar.index(month))+1, int(day))
 		except ValueError, e:
 			print '*** uh oh: %s' % e
 			continue
@@ -64,7 +64,7 @@ def median(data):
     return sum(sorted(data)[quotient - 1:quotient + 1]) / 2.
 	
 if __name__ == '__main__':
-	STR = "%B %d, %Y"
+	str = '%B %d, %Y'
 	dates = get_dates()
 	mn, mx, deltas = get_deltas(dates)
 	avg = (sum(deltas) / len(deltas))
@@ -74,8 +74,8 @@ if __name__ == '__main__':
 	next = (last + datetime.timedelta(days=avg))
 	print ""
 	print "Number of haircuts recorded: %d (Since %s)" % (len(dates), dates[0].strftime("%B %d, %Y"))
-	print "Shortest period between haircuts: %d days (%s to %s)" % ((mn[1]-mn[0]).days, mn[0].strftime(STR), mn[1].strftime(STR))
-	print "Longest period between haircuts: %d days (%s to %s)" % ((mx[1]-mx[0]).days, mx[0].strftime(STR), mx[1].strftime(STR))
+	print "Shortest period between haircuts: %d days (%s to %s)" % ((mn[1]-mn[0]).days, mn[0].strftime(str), mn[1].strftime(str))
+	print "Longest period between haircuts: %d days (%s to %s)" % ((mx[1]-mx[0]).days, mx[0].strftime(str), mx[1].strftime(str))
 	print "Average period between haircuts: %d days" % avg
 	print "Median period between haircuts: %d days" % mdn
 	if (today-last).days == 0:
@@ -83,10 +83,10 @@ if __name__ == '__main__':
 	if (today-last).days == 1:
 		print "Your last haircut was yesterday."
 	if (today-last).days > 1:
-		print "Your last haircut was %s days ago. (%s)" % ((today-last).days, last.strftime(STR))
+		print "Your last haircut was %s days ago. (%s)" % ((today-last).days, last.strftime(str))
 	if (next-datetime.date.today()).days <= -1:
-		print "You probably should’ve had a haircut %s days ago. (%s)" % (abs((next-datetime.date.today()).days), next.strftime(STR))
+		print "You probably should’ve had a haircut %s days ago. (%s)" % (abs((next-datetime.date.today()).days), next.strftime(str))
 	if (next-datetime.date.today()).days >= 1:
-		print "You probably should get another haircut in about %s days. (%s)" % ((next-datetime.date.today()).days, next.strftime(STR))
+		print "You probably should get another haircut in about %s days. (%s)" % ((next-datetime.date.today()).days, next.strftime(str))
 	print ""
 
