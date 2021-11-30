@@ -23,6 +23,10 @@ You probably should’ve had a haircut 8 days ago. (May 18, 2020)
 
 ## Change Log
 
+### 20211130
++ Added “User-agent” header to fix `urllib2.HTTPError: HTTP Error 406: Not Acceptable`
++ Standardized variable naming and value quoting because consistency
+
 ### 20201010
 + Added calculation of the median period between haircuts
 
