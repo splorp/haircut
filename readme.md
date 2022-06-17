@@ -18,10 +18,14 @@ You probably should’ve had a haircut 8 days ago. (May 18, 2020)
 
 ## Requirements
 
-+ [Python 2.x](https://www.python.org/downloads/)
-+ [BeautifulSoup 3.x](https://www.crummy.com/software/BeautifulSoup/)
++ [Python 2](https://www.python.org/downloads/)
++ [Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/)
 
 ## Change Log
+
+### 20220617
++ Updated to [Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/)
++ Added `html.parser` argument to `BeautifulSoup()` constructor
 
 ### 20211130
 + Added “User-agent” header to fix `urllib2.HTTPError: HTTP Error 406: Not Acceptable`
@@ -44,7 +48,7 @@ You probably should’ve had a haircut 8 days ago. (May 18, 2020)
 + Updated URLs to use https
 
 ### 20180327
-+ Added note regarding [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) requirement
++ Added note regarding [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/) requirement
 
 ### 20131109
 + Set UTF-8 encoding

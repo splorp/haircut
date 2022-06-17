@@ -3,7 +3,7 @@
 # A script to calculate some basic stats on Grant Hutchinson’s haircuts.
 # See: https://splorp.com/about/haircut/
 #
-# Requires BeautifulSoup 3
+# Requires Beautiful Soup 4
 # https://www.crummy.com/software/BeautifulSoup/
 #
 # Sample output:
@@ -17,7 +17,7 @@
 
 import datetime
 import urllib2
-from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 
 calendar = 'january february march april may june july august september october november december'.split()
 
@@ -25,7 +25,7 @@ page = urllib2.Request('https://splorp.com/about/haircut')
 page.add_header('User-agent', 'Mozilla 5.10')
 
 def fetch_dates():
-	soup = BeautifulSoup(urllib2.urlopen(page))
+	soup = BeautifulSoup(urllib2.urlopen(page), 'html.parser')
 	return [span.string for span in soup.findAll('span', {'class': 'dtstart'})]
 
 def get_dates():
