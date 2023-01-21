@@ -17,6 +17,10 @@
 
 import datetime
 import urllib2
+import os, ssl
+if (not os.environ.get('PYTHONHTTPSVERIFY', '') and
+    getattr(ssl, '_create_unverified_context', None)): 
+    ssl._create_default_https_context = ssl._create_unverified_context
 from bs4 import BeautifulSoup
 
 calendar = 'january february march april may june july august september october november december'.split()

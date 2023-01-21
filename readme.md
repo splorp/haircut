@@ -23,6 +23,9 @@ You probably should’ve had a haircut 8 days ago. (May 18, 2020)
 
 ## Change Log
 
+### 20230121
++ Added fix for [failed certificate verification](https://web.archive.org/web/20190428084018/http://blog.pengyifan.com/how-to-fix-python-ssl-certificate_verify_failed/) related to the `urllib2.py` library
+
 ### 20220617
 + Updated to [Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/)
 + Added `html.parser` argument to `BeautifulSoup()` constructor
