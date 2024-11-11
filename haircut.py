@@ -8,12 +8,14 @@
 #
 # Sample output:
 #
-# Number of haircuts recorded: 106 (Since October 10, 1998)
-# Shortest period between haircuts: 9 days (July 21, 2016 to July 30, 2016)
-# Longest period between haircuts: 120 days (August 11, 2007 to December 09, 2007)
-# Average period between haircuts: 74 days
-# Your last haircut was 82 days ago. (March 05, 2020)
-# You probably should’ve had a haircut 8 days ago. (May 18, 2020)
+# Number of haircuts recorded: 139 (Since October 10, 1998)
+# Shortest time between haircuts: 9 days (July 21, 2016 to July 30, 2016)
+# Longest time between haircuts: 138 days (November 28, 2022 to April 15, 2023)
+# Median time between haircuts: 69 days
+# Average time between haircuts: 69 days
+# Average time between last six haircuts: 48 days
+# Your last haircut was 2 days ago. (November 09, 2024)
+# You probably should get another haircut in about 46 days. (December 27, 2024)
 
 import datetime
 import urllib2
@@ -82,10 +84,10 @@ if __name__ == '__main__':
 	next = (last + datetime.timedelta(days=avgm))
 	print ""
 	print "Number of haircuts recorded: %d (Since %s)" % (len(dates), dates[0].strftime("%B %d, %Y"))
-	print "Shortest period between haircuts: %d days (%s to %s)" % ((mn[1]-mn[0]).days, mn[0].strftime(str), mn[1].strftime(str))
-	print "Longest period between haircuts: %d days (%s to %s)" % ((mx[1]-mx[0]).days, mx[0].strftime(str), mx[1].strftime(str))
-	print "Average period between haircuts: %d days" % avg
-	print "Median period between haircuts: %d days" % mdn
+	print "Shortest time between haircuts: %d days (%s to %s)" % ((mn[1]-mn[0]).days, mn[0].strftime(str), mn[1].strftime(str))
+	print "Longest time between haircuts: %d days (%s to %s)" % ((mx[1]-mx[0]).days, mx[0].strftime(str), mx[1].strftime(str))
+	print "Median time between haircuts: %d days" % mdn
+	print "Average time between haircuts: %d days" % avg
 	print "Average time between last six haircuts: %d days" % avgm
 	if (today-last).days == 0:
 		print "You got your haircut today. Awesome."
