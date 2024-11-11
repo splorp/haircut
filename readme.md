@@ -26,8 +26,8 @@ You probably should get another haircut in about 46 days. (December 27, 2024)
 
 ### 20241111
 + Added calculation of the average time between the previous six haircuts
-+ The next haircut date is now based on the average time between the previous six haircuts
-+ Changed terminology from ‘period’ to ‘time’ in the output
++ The next haircut date is now based on the previous six haircut average
++ Changed terminology from “period” to “time” in the output
 
 ### 20230121
 + Added fix for [failed certificate verification](https://web.archive.org/web/20190428084018/http://blog.pengyifan.com/how-to-fix-python-ssl-certificate_verify_failed/) related to the `urllib2.py` library
@@ -48,7 +48,7 @@ You probably should get another haircut in about 46 days. (December 27, 2024)
 + Added newlines before and after output because readability
 
 ### 20200714
-+ Modified output for haircuts occuring one day ago
++ Modified output for haircuts occurring one day ago
 
 ### 20200526
 + Modified output for consistent display of days and dates
