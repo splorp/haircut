@@ -7,13 +7,14 @@ Based on the original [Gist](https://gist.github.com/kylefox/654113) created by 
 ## Sample Output
 
 ```
-Number of haircuts recorded: 106 (Since October 10, 1998)
-Shortest period between haircuts: 9 days (July 21, 2016 to July 30, 2016)
-Longest period between haircuts: 120 days (August 11, 2007 to December 09, 2007)
-Average period between haircuts: 74 days
-Median period between haircuts: 73 days
-Your last haircut was 82 days ago. (March 05, 2020)
-You probably should’ve had a haircut 8 days ago. (May 18, 2020)
+Number of haircuts recorded: 139 (Since October 10, 1998)
+Shortest time between haircuts: 9 days (July 21, 2016 to July 30, 2016)
+Longest time between haircuts: 138 days (November 28, 2022 to April 15, 2023)
+Median time between haircuts: 69 days
+Average time between haircuts: 69 days
+Average time between last six haircuts: 48 days
+Your last haircut was 2 days ago. (November 09, 2024)
+You probably should get another haircut in about 46 days. (December 27, 2024)
 ```
 
 ## Requirements
@@ -22,6 +23,11 @@ You probably should’ve had a haircut 8 days ago. (May 18, 2020)
 + [Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/)
 
 ## Change Log
+
+### 20241111
++ Added calculation of the average time between the previous six haircuts
++ The next haircut date is now based on the average time between the previous six haircuts
++ Changed terminology from ‘period’ to ‘time’ in the output
 
 ### 20230121
 + Added fix for [failed certificate verification](https://web.archive.org/web/20190428084018/http://blog.pengyifan.com/how-to-fix-python-ssl-certificate_verify_failed/) related to the `urllib2.py` library
@@ -35,7 +41,7 @@ You probably should’ve had a haircut 8 days ago. (May 18, 2020)
 + Standardized variable naming and value quoting because consistency
 
 ### 20201010
-+ Added calculation of the median period between haircuts
++ Added calculation of the median time between haircuts
 
 ### 20200922
 + Modified output for even more consistent display of days and dates
