@@ -65,23 +65,22 @@ def get_deltas(dates):
 				mn = (dates[idx-1], dates[idx])
 			deltas.append(days)
 	return mn, mx, deltas
-	
+
 def median(data):
     quotient, remainder = divmod(len(data), 2)
     if remainder:
         return sorted(data)[quotient]
     return sum(sorted(data)[quotient - 1:quotient + 1]) / 2.
-	
+
 if __name__ == '__main__':
 	str = '%B %d, %Y'
 	dates = get_dates()
 	mn, mx, deltas = get_deltas(dates)
-	avg = (sum(deltas) / len(deltas))
 	mdn = median(deltas)
+	avg = (sum(deltas) / len(deltas))
 	avgm = (sum(deltas[-6:]) / 6)
 	today = datetime.date.today()
 	last = dates[-1]
-	next = (last + datetime.timedelta(days=avg))
 	next = (last + datetime.timedelta(days=avgm))
 	print ""
 	print "Number of haircuts recorded: %d (Since %s)" % (len(dates), dates[0].strftime("%B %d, %Y"))
@@ -101,4 +100,3 @@ if __name__ == '__main__':
 	if (next-datetime.date.today()).days >= 1:
 		print "You probably should get another haircut in about %s days. (%s)" % ((next-datetime.date.today()).days, next.strftime(str))
 	print ""
-
