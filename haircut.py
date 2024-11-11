@@ -27,6 +27,7 @@ from bs4 import BeautifulSoup
 
 calendar = 'january february march april may june july august september october november december'.split()
 
+# page = urllib2.Request('https://test.splorp.me/haircut-test-page/')
 page = urllib2.Request('https://splorp.com/about/haircut')
 page.add_header('User-agent', 'Mozilla 5.10')
 
