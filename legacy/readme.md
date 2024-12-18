@@ -7,29 +7,22 @@ Based on the original [Gist](https://gist.github.com/kylefox/654113) created by 
 ## Sample Output
 
 ```
-Number of haircuts recorded: 140 (Since October 10, 1998)
+Number of haircuts recorded: 139 (Since October 10, 1998)
 Shortest time between haircuts: 9 days (July 21, 2016 to July 30, 2016)
 Longest time between haircuts: 138 days (November 28, 2022 to April 15, 2023)
-Median time between haircuts: 69.0 days
-Average time between haircuts: 68.8 days
-Average time between last six haircuts: 50.8 days
-Your last haircut was 2 days ago. (December 17, 2024)
-You probably should get another haircut in about 48 days. (February 05, 2025)
+Median time between haircuts: 69 days
+Average time between haircuts: 69 days
+Average time between last six haircuts: 48 days
+Your last haircut was 2 days ago. (November 09, 2024)
+You probably should get another haircut in about 46 days. (December 27, 2024)
 ```
 
 ## Requirements
 
-+ [Python 3](https://www.python.org/downloads/)
++ [Python 2](https://www.python.org/downloads/)
 + [Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/)
 
 ## Change Log
-
-### 20241218
-+ Ported script to Python 3
-+ Replaced `urllib2` library with `urllib.request` library
-+ Removed exception handling for malformed dates
-+ Median and average times are now formatted with a single decimal place
-+ Moved the script for Python 2 to the `/legacy/` directory
 
 ### 20241111
 + Added calculation of the average time between the previous six haircuts
