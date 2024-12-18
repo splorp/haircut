@@ -3,19 +3,21 @@
 # A script to calculate some basic stats on Grant Hutchinson’s haircuts.
 # See: https://splorp.com/about/haircut/
 #
+# Requires Python 3
+# https://www.python.org/downloads/
 # Requires Beautiful Soup 4
 # https://www.crummy.com/software/BeautifulSoup/
 #
 # Sample output:
 #
-# Number of haircuts recorded: 139 (Since October 10, 1998)
+# Number of haircuts recorded: 140 (Since October 10, 1998)
 # Shortest time between haircuts: 9 days (July 21, 2016 to July 30, 2016)
 # Longest time between haircuts: 138 days (November 28, 2022 to April 15, 2023)
-# Median time between haircuts: 69 days
-# Average time between haircuts: 69 days
-# Average time between last six haircuts: 48 days
-# Your last haircut was 2 days ago. (November 09, 2024)
-# You probably should get another haircut in about 46 days. (December 27, 2024)
+# Median time between haircuts: 69.0 days
+# Average time between haircuts: 68.8 days
+# Average time between last six haircuts: 50.8 days
+# Your last haircut was yesterday.
+# You probably should get another haircut in about 49 days. (February 05, 2025)
 
 import datetime
 import urllib.request
