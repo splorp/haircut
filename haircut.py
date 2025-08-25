@@ -37,7 +37,7 @@ response = urllib.request.urlopen(page)
 
 def fetch_dates():
 	soup = BeautifulSoup(response, 'html.parser')
-	return [span.string for span in soup.findAll('span', {'class': 'dtstart'})]
+	return [span.string for span in soup.find_all('span', {'class': 'dtstart'})]
 
 def get_dates():
 	dates = []

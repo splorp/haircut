@@ -24,6 +24,9 @@ You probably should get another haircut in about 48 days. (February 05, 2025)
 
 ## Change Log
 
+### 20250825
++ Changed deprecated method `findAll` to `find_all`
+
 ### 20241218
 + Ported script to Python 3
 + Replaced `urllib2` library with `urllib.request` library
