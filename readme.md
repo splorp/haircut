@@ -22,6 +22,42 @@ You probably should get another haircut in about 48 days. (February 05, 2025)
 + [Python 3](https://www.python.org/downloads/)
 + [Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/)
 
+## Installation
+
+These installation instructions pertain specifically to my primary developer machine, a 2015 MacBook Pro running macOS 10.13.6 High Sierra. They are included here mainly for my own reference.
+
+Your mileage will very likely vary.
+
+**Install MacPorts**
+
+Download the legacy [MacPorts Installer](https://www.macports.org/install.php) applicable to the macOS version you’re using.
+
+In this case, for [High Sierra](https://github.com/macports/macports-base/releases/download/v2.12.5/MacPorts-2.12.5-10.13-HighSierra.pkg).
+
+Run the installer.
+
+**Install Python 3**
+
+In a new Terminal window:
+
+`$ sudo port install python311`
+
+Set this version of Python as the default run by either the `python` or `python3` commands.
+
+`$ sudo port select --set python python311`
+
+`$ sudo port select --set python3 python311`
+
+**Install Beautiful Soup 4**
+
+`$ sudo port install py311-beautifulsoup4`
+
+## Operation
+
+In the Terminal, `cd` to the directory where `haircut.py` resides
+
+`$ python haircut.py`
+
 ## Change Log
 
 ### 20250825
